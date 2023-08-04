@@ -19,7 +19,7 @@ class VerifyJWTToken
         $token = $request->cookie('token');
         $result = JWTToken::VerifyToken($token);
         if($result == 'unauthorized'){
-            return redirect('/user-login');
+            return redirect('/signin-page');
         }
         else {
             $request->headers->set('email', $result->userEmail);

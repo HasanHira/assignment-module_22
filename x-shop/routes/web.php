@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 // User API Routes
 Route::post('/user-registration', [UserController::class, 'RegisterUser']);
 Route::post('/user-login', [UserController::class, 'LoginUser']);
-Route::get('/user-profile', [UserController::class, 'ProfileUser'])->middleware([VerifyJWTToken::class]);
 Route::post('/user-logout', [UserController::class, 'LogoutUser']);
+Route::get('/user-profile', [UserController::class, 'ProfileUser'])->middleware([VerifyJWTToken::class]);
 
 // User View Routes
 Route::get('/signin-page', [UserController::class, 'LoginPage']);

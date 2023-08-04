@@ -57,16 +57,14 @@
             });
             hideLoader();
 
-            consol.log(response.data['2']);
-
             if(response.status===200 && response.data['status']==='success'){
                 window.location.href="/dashboard";
                 successToast(response.data['message']);
             } else {
                 errorToast(response.data['message']);
             }
-
         }
+
     }
 
 

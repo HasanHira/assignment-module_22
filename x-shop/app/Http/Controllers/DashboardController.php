@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    function DashboardPage(Request $request):View{
+    function DashboardPage():View{
         return view('pages.dashboard.dashboard-page');
     }
 }

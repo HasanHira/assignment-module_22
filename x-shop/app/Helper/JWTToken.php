@@ -9,6 +9,7 @@ class JWTToken
 {
 
     public static function CreateToken($userEmail, $userID):string{
+
         $key = env('JWT_KEY');
         $payload = [
             'iss' => 'X-Shop',
