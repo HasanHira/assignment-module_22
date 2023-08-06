@@ -48,6 +48,7 @@ class UserController extends Controller
         ->select('id')->first();
 
         if($count !== null){
+            // Issue Token
             $token = JWTToken::CreateToken($request->input('email'), $request->id);
 
             return response()->json([
